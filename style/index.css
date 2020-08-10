@@ -130,7 +130,9 @@ header nav a {
 }
 
 .contact-me:hover,
-header nav a:hover {
+header nav a:hover,
+.contact-me:active,
+header nav a:active {
   background-color: #bd8371;
   border-color: #b78f82;
 }
@@ -141,6 +143,7 @@ nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  text-align: center;
 }
 
 h3 {
@@ -210,29 +213,34 @@ footer i {
   color: #707b79;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 801px) {
   .projects-wrapper img:hover {
     width: 100%;
     height: 95%;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   nav {
     width: 90vw;
+  }
+  .contact-me,
+  header nav a {
+    margin: 0.3rem 0;
+    padding: 1rem 1.8rem;
   }
   .content {
     display: flex;
     flex-direction: column;
   }
   .projects-wrapper {
-    width: 100%;
+    width: 99%;
     justify-content: space-evenly;
     height: auto;
   }
   .projects-wrapper a {
     width: 47%;
-    height: 20rem;
+    height: 22rem;
   }
   .projects-wrapper img {
     width: 100%;
@@ -240,14 +248,33 @@ footer i {
   .description {
     width: unset;
   }
+  footer .linkedin i {
+    font-size: 3rem;
+  }
 }
 
-@media screen and (max-width: 630px) {
-  footer {
-    justify-content: start;
-    padding: 3.5rem 4.5rem;
+@media (max-width: 500px) {
+  h1 {
+    font-size: 4rem;
   }
-  footer i {
-    font-size: 2.5rem;
+  h3 {
+    font-size: 2rem;
+  }
+  nav {
+    flex-direction: column;
+    width: 40vw;
+    margin-top: 0;
+  }
+  .intro {
+    padding: 0 1rem;
+  }
+  .heroImage {
+    height: 35vh;
+  }
+  .projects-wrapper img {
+    height: 94%;
+  }
+  footer .linkedin {
+    display: none;
   }
 }
